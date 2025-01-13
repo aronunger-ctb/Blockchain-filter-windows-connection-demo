@@ -57,7 +57,7 @@ jobs:
 
     env:
       Solution_Name: Blockchain-filter-windows-connection-demo.sln  # Replace with your solution name
-      Project_Path: Blockchain-filter-windows-connection-demo/BlockchainFilter.csproj  # Replace with the path to your main project
+      Project_Path: BlockchainFilter/BlockchainFilter.csproj  # Corrected path to the project file
 
     steps:
     - name: Checkout
