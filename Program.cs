@@ -14,10 +14,17 @@ namespace BlockchainFilter
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MainForm());
+        }
 
-            // Initialize FiddlerCore
+        public static void StartFiddler()
+        {
             FiddlerApplication.AfterSessionComplete += FiddlerApplication_AfterSessionComplete;
             FiddlerApplication.Startup(8888, FiddlerCoreStartupFlags.Default);
+        }
+
+        public static void StopFiddler()
+        {
+            FiddlerApplication.Shutdown();
         }
 
         private static void FiddlerApplication_AfterSessionComplete(Session oSession)

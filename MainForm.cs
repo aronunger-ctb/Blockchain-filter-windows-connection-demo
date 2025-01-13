@@ -12,12 +12,12 @@ namespace BlockchainFilter
 
         private void btnStart_Click(object sender, EventArgs e)
         {
-            FiddlerApplication.Startup(8888, FiddlerCoreStartupFlags.Default);
+            Program.StartFiddler();
         }
 
         private void btnStop_Click(object sender, EventArgs e)
         {
-            FiddlerApplication.Shutdown();
+            Program.StopFiddler();
         }
     }
 }
